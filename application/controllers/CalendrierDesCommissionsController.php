@@ -117,7 +117,7 @@ class CalendrierDesCommissionsController extends Zend_Controller_Action
         $dbDossierAffectation = new Model_DbTable_DossierAffectation;
 
         //Si on prend en compte les heures on récupère uniquement les dossiers n'ayant pas d'heure de passage
-        $listeDossiersNonAffect = $dbDossierAffectation->getDossierNonAffect($this->_getParam('dateCommId'));
+        $listeDossiersNonAffect = $dbDossierAffectation->getDossierNonAffectBis($this->_getParam('dateCommId'));
 
         $dbDossier = new Model_DbTable_Dossier;
         $dbDocUrba = new Model_DbTable_DossierDocUrba;
